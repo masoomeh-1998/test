@@ -1,0 +1,5 @@
+services:
+  app:
+    image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+    command:
+      - /bin/bash
