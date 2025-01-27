@@ -1,5 +1,5 @@
 version: '3.3'
-services:
+services:  
   app:
 <<<<<<< HEAD
     image: ghcr.io/${{ github.repository_owner }}/my-app:latest
