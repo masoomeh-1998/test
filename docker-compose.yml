@@ -1,5 +1,5 @@
 services:
   app:
-    image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+    image: ghcr.io/${{ github.repository_owner }}/my-app:latest
     command:
       - /bin/bash
