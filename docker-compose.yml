@@ -3,4 +3,4 @@ services:
   app:
     image: ghcr.io/masoomeh-1998/test/my-app:latest
     command:
-      - /bin/bash
+      - tail -f /dev/null
