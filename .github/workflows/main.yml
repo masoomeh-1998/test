@@ -29,5 +29,5 @@ jobs:
       - name: Docker compose up
         run: |
            sudo docker pull ghcr.io/${{ github.repository }}/my-app:latest
-           sudo docker-copmose down
-           sudo docker-copmose up -d
+           docker-copmose down
+           docker-copmose up -d
