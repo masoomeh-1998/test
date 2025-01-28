@@ -16,18 +16,18 @@ jobs:
         
       - name: Log in to GitHub Container Registry
         run: |
-          echo ${{ secrets.MY_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+          echo ${{ secrets.MY_TOKEN }} | sudo docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository }}/my-app:latest .
+          sudo docker build -t ghcr.io/${{ github.repository }}/my-app:latest .
 
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.repository }}/my-app:latest
+          sudo docker push ghcr.io/${{ github.repository }}/my-app:latest
 
       - name: Docker compose up
         run: |
-           docker pull ghcr.io/${{ github.repository }}/my-app:latest
-           docker-copmose down
-           docker-copmose up -d
+           sudo docker pull ghcr.io/${{ github.repository }}/my-app:latest
+           sudo docker-copmose down
+           sudo docker-copmose up -d
