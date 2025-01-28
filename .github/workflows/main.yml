@@ -16,6 +16,7 @@ jobs:
         
       - name: Log in to GitHub Container Registry
         run: |
+          echo "0371557038" | sudo su 
           echo ${{ secrets.MY_TOKEN }} | sudo docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: Build Docker image
@@ -29,5 +30,5 @@ jobs:
       - name: Docker compose up
         run: |
           sudo docker pull ghcr.io/${{ github.repository }}/my-app:latest
-          sudo docker copmose down
-          sudo docker copmose up -d
+          sudo docker-copmose down
+          sudo docker-copmose up -d
