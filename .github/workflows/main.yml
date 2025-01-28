@@ -30,7 +30,12 @@ jobs:
       - name: Pull image 
         run: |
            sudo docker pull ghcr.io/${{ github.repository }}/my-app:latest
+      
+      - name: Installing Docker compose
+        run: | 
+          curl -L "https://github.com/docker/compose/releases/download/2.28.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          chmod +x /usr/local/bin/docker-compose
         
       - name: Docker compose up
         run: |
-           sudo docker-copmose up -d
+           sudo docker copmose up -d
