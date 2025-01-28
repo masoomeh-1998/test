@@ -38,4 +38,4 @@ jobs:
         
       - name: Docker compose up
         run: |
-          docker Compose up -d
+          docker compose up -d
