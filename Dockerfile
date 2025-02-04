@@ -4,6 +4,4 @@ WORKDIR /app
 
 COPY . /app
 
-ENTRYPOINT [ "python3", "hello.py"  ]
-
-CMD [ "tail -f /dev/null" ]
+CMD [ "python3", "hello.py"  ]
